@@ -8,6 +8,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 // import { Context } from "../../utils/context";
 import Cart from "../Cart/Cart";
 import "./Header.scss";
+import { colors } from "@mui/material";
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
       const [showCart, setShowCart] = useState(false);
@@ -25,17 +26,15 @@ const Header = () => {
         window.addEventListener("scroll", handleScroll);
     }, []);
 
-    
-
 
     return(
       <>
     <header className={`main-header ${scrolled ?"sticky-header":""}`}>
       <div className="header-content">
       <ul className="left">
-        <li>Home</li>
+        <li><a style={{textDecoration:"none", color:"white"}}href="http://localhost:3000">Home</a></li>
         <li>About</li>
-        <li>Categories</li>
+        <li ><a style={{textDecoration:"none", color:"white"}}href="http://localhost:3000/category/1">Categories</a></li>
       </ul>
       <div className="center">AJAYDEV</div>
       <div className="right">
